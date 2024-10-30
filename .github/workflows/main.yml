@@ -1,0 +1,36 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy_lambda:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Install dependencies and copy node_modules
+        env:
+          CI: true
+        run: |
+          npm ci
+          npm run tsc
+      - name: Package and deploy
+        run: |
+          cp -r ./node_modules ./build/
+          cd build
+          zip -r ../deploy.zip .
+          cd ..
+          aws lambda update-function-code --function-name=liga-function --zip-file=fileb://deploy.zip
+
+
