@@ -2,6 +2,8 @@
 # Este proyecto busca mostrar la configuración a través del SDK de AWS y node js, utilizando su capa gratuita, creando una API de autenticación con algunos de los servicios brindados por AWS.
 
 # Puedes ver la descripción detallada en:
+https://youtu.be/9Jpagt7dB68
+
 
 # Versiones 
 <!-- 
@@ -12,13 +14,13 @@ mysql: Ver 15.1 Distrib 10.4.32-MariaDB
 "mysql2": "^3.11.3"
 "@aws-sdk/client-cognito-identity-provider": "^3.675.0",
 -->
-# Instalacion de dependencias con: npm i | npm install
+# Instalacion de dependencias con -> npm i | npm install
 
-# Correr el proyecto: npm run dev
+# Correr el proyecto -> npm run dev
 
-# Crear migraciones: npm run migration:generate src/migration/nombre_migracion
+# Crear migraciones -> npm run migration:generate src/migration/nombre_migracion
 
-# Ejecutar las migraciones npm run migration:run
+# Ejecutar las migraciones -> npm run migration:run
 
 # Rutas principales 
 <!-- 
