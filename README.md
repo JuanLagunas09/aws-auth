@@ -1,7 +1,7 @@
 
-# Este proyecto busca la mostrar la configuracion a traves del SDK de aws y node js, utilizando su capa gratuita, creanbdo una api de autenticacion con algunos de los servicios brindados por aws
+# Este proyecto busca mostrar la configuración a través del SDK de AWS y node js, utilizando su capa gratuita, creando una API de autenticación con algunos de los servicios brindados por AWS.
 
-# Puedes ver la descripcion dellada en: 
+# Puedes ver la descripción detallada en:
 
 # Versiones 
 <!-- 
